@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React from "react";
 import { FiCreditCard, FiMail, FiUser, FiUsers } from "react-icons/fi";
 import project1 from "@/Images/project-images/1.png";
 import project2 from "@/Images/project-images/2.png";
@@ -7,11 +7,13 @@ import project4 from "@/Images/project-images/4.png";
 import Link from "next/link";
 import Image from "next/image";
 
+
 const ProjectCards = () => {
+
   return (
     <div className="p-4">
       <div className="mb-8 flex flex-col items-center justify-center gap-4 md:flex-row md:items-end md:px-8 md:w-[80%] lg:w-[60%] m-auto p-4">
-        <h2 className="max-w-5xl text-2xl font-[700] md:text-4xl font-roboto text-[#323b4b]">
+        <h2 className="max-w-5xl text-center text-2xl font-[700] md:text-4xl font-roboto text-[rgb(60,93,225)]">
           We are an Online Consulting Platform for every business industry
         </h2>
       </div>
@@ -69,7 +71,7 @@ const Card = ({
       <Image
         src={backgroundImage}
         alt={alt}
-        className="max-w-84 "
+        className="max-w-84"
         height={400}
         width={400}
         loading="lazy"

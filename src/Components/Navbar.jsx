@@ -73,7 +73,7 @@ const Navbar = () => {
               <Link
                 href={"/"}
                 onClick={closeMobileMenu}
-                className={`block py-2 pl-3 pr-4 text-gray-300 rounded lg:bg-transparent  lg:p-0 ${
+                className={`block py-2 pl-3 pr-4 text-center text-gray-300 rounded lg:bg-transparent  lg:p-0 ${
                   pathname === "/"
                     ? "border-b-2 rounded-none bg-[#4831D4] text-white font-semibold transition-all ease-in-out delay-500"
                     : ""
@@ -96,7 +96,7 @@ const Navbar = () => {
               <Link
                 href={"/portfolio"}
                 onClick={closeMobileMenu}
-                className={`block py-2 pl-3 pr-4 text-gray-300 rounded lg:bg-transparent  lg:p-0 ${
+                className={`block py-2 pl-3 pr-4 text-center text-gray-300 rounded lg:bg-transparent  lg:p-0 ${
                   pathname === "/portfolio"
                     ? "border-b-2 rounded-none bg-[#4831D4] text-white font-semibold transition-all ease-in-out delay-500"
                     : ""
@@ -110,7 +110,7 @@ const Navbar = () => {
               <Link
                 href={"/about"}
                 onClick={closeMobileMenu}
-                className={`block py-2 pl-3 pr-4 text-gray-300 rounded lg:bg-transparent  lg:p-0 ${
+                className={`block py-2 pl-3 pr-4 text-center text-gray-300 rounded lg:bg-transparent  lg:p-0 ${
                   pathname === "/about"
                     ? "border-b-2 rounded-none bg-[#4831D4] text-white font-semibold transition-all ease-in-out delay-500"
                     : ""
@@ -123,7 +123,7 @@ const Navbar = () => {
               <Link
                 href={"/contact"}
                 onClick={closeMobileMenu}
-                className={`block py-2 pl-3 pr-4 text-gray-300 rounded lg:bg-transparent  lg:p-0 ${
+                className={`block py-2 pl-3 pr-4 text-center text-gray-300 rounded lg:bg-transparent  lg:p-0 ${
                   pathname === "/contact"
                     ? "border-b-2 rounded-none bg-[#4831D4] text-white font-semibold transition-all ease-in-out delay-500"
                     : ""
@@ -132,11 +132,11 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-            <li className="mt-3 mb-1">
+            <li className="mt-3 mb-1 text-center">
               <Link
                 href="/consultancyForm"
                 onClick={closeMobileMenu}
-                className="text-gray-900 py-2 pl-3 pr-4 lg:hidden bg-[#CCF381] font-[800]
+                className="text-gray-900 py-2 pl-3 pr-4 items-center lg:hidden bg-[#CCF381] font-[800]
                  rounded-lg text-sm px-4 lg:px-5 lg:py-2.5 sm:mr-2 lg:mr-0
                    focus:outline-none
                   "
