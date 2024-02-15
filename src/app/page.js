@@ -4,6 +4,8 @@ import heroImage from "@/Images/heroImage.svg";
 import Link from "next/link";
 import LogoSlider from "@/Components/logoSlider/LogoSlider";
 import ProjectCards from "@/Components/ProjectCards";
+import ServicesComponent from "@/Components/ServicesComponent";
+// import ClientsTestimonials from "@/Components/ClientsTestimonials";
 
 export default function Home() {
   return (
@@ -52,6 +54,12 @@ export default function Home() {
       <section>
        <ProjectCards />
       </section>
+      <section>
+        <ServicesComponent />
+      </section>
+      {/* <section>
+        <ClientsTestimonials />
+      </section> */}
     </main>
   );
 }
