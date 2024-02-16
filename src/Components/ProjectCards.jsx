@@ -7,13 +7,11 @@ import project4 from "@/Images/project-images/4.png";
 import Link from "next/link";
 import Image from "next/image";
 
-
 const ProjectCards = () => {
-
   return (
     <div className="p-4">
       <div className="mb-8 flex flex-col items-center justify-center gap-4 md:flex-row md:items-end md:px-8 md:w-[80%] lg:w-[60%] m-auto p-4">
-        <h2 className="max-w-5xl text-center text-2xl font-[700] md:text-4xl font-roboto text-[rgb(60,93,225)]">
+        <h2 className="mb-3 text-center text-3xl font-bold text-[#4831d4] sm:text-4xl md:text-[40px]">
           We are an Online Consulting Platform for every business industry
         </h2>
       </div>

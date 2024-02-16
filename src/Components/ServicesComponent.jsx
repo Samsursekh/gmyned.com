@@ -29,7 +29,7 @@ const ServiceCard = ({ icon, title, details }) => {
 
 const ServicesComponent = () => {
   return (
-    <section className="pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[60px] bg-slate-100 w-full m-auto">
+    <section className=" pt-20 dark:bg-dark lg:pt-[60px] bg-slate-100 w-full m-auto">
       <div className="container mx-auto">
         <div className="flex flex-wrap ">
           <div className="w-full px-4">
