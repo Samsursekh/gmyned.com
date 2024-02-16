@@ -1,7 +1,10 @@
+import ServicesComponent from '@/Components/ServicesComponent'
 import React from 'react'
 
 export default function Services() {
   return (
-    <div>Services</div>
+    <section>
+      <ServicesComponent />
+    </section>
   )
 }

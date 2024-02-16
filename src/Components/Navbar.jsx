@@ -38,7 +38,7 @@ const Navbar = () => {
 
         <div className="flex items-center lg:order-2">
           <Link
-            href="/consultancyForm"
+            href="/contact"
             className=" hidden lg:inline-block bg-[#CCF381] 
             font-[800] rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0
             focus:outline-none text-[#4831d4] w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
@@ -134,7 +134,7 @@ const Navbar = () => {
             </li>
             <li className="mt-3 mb-1 text-center">
               <Link
-                href="/consultancyForm"
+                href="/contact"
                 onClick={closeMobileMenu}
                 className="text-gray-900 py-2 pl-3 pr-4 items-center lg:hidden bg-[#CCF381] font-[800]
                  rounded-lg text-sm px-4 lg:px-5 lg:py-2.5 sm:mr-2 lg:mr-0
