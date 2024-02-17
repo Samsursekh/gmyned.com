@@ -7,7 +7,7 @@ import ServicesComponent from "@/Components/ServicesComponent";
 import ClientsTestimonials from "@/Components/ClientsTestimonials";
 import CTA from "@/Components/CTA";
 import FaqAccordion from "@/Components/FaqAccordionComponent";
-
+import { Lamp } from "@/Components/Lamp";
 
 export default function Home() {
   return (
@@ -44,8 +44,8 @@ export default function Home() {
             className="transition-all duration-300 ease-in-out hover:scale-105 mx-auto w-full max-w-[80%] sm:pb-12 lg:pb-0"
             src={heroImage}
             alt="hero image"
-            width={500}
-            height={500}
+            width={200}
+            height={200}
             priority
           />
         </div>
@@ -59,15 +59,18 @@ export default function Home() {
       <section>
         <ServicesComponent />
       </section>
-       <section>
+      <section>
         <CTA />
-       </section>
+      </section>
       <section>
         <ClientsTestimonials />
       </section>
-       <section>
+      <section>
         <FaqAccordion />
-       </section>
+      </section>
+      <section>
+        <Lamp />
+      </section>
     </main>
   );
 }

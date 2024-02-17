@@ -28,10 +28,10 @@ const Navbar = () => {
         <Link href={"/"} className="flex items-center">
           <Image
             src={logo}
-            className=""
+            className="max-w-full"
             alt="gMynd Logo"
-            height={100}
             width={100}
+            height={100}
             priority
           />
         </Link>
