@@ -61,6 +61,8 @@ const LogoSlider = () => {
               src={logo}
               alt={`Logo ${index + 1}`}
               className="w-32 md:w-36 lg:w-40"
+              height={100}
+              width={100}
             />
           </Slider.Slide>
         ))}
@@ -82,6 +84,8 @@ const LogoSlider = () => {
                 src={logo}
                 alt={`Logo ${index + 1}`}
                 className="w-32 md:w-36 lg:w-40"
+                height={100}
+                width={100}
               />
             </Slider.Slide>
           ))}

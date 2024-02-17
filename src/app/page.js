@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="relative">
       <div
-        className="items-center w-full grid-cols-2 mx-auto lg:grid md:py-10 lg:py-8 xl:py-5 bg-[#4831D4] h-[90vh]"
+        className="items-center w-full grid-cols-2 mx-auto lg:grid md:py-10 lg:py-8 xl:py-5 bg-[#4831D4] h-[100vh]"
         data-aos="fade-right"
         data-aos-duration="800"
       >
