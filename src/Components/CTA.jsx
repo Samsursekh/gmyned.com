@@ -10,7 +10,6 @@ const CTA = () => {
               <div className="w-full px-4 lg:w-1/2">
                 <h2 className="mb-6 text-3xl font-bold leading-tight text-white sm:mb-8 sm:text-[40px]/[48px] lg:mb-0">
                   <span className="xs:block">
-                    {" "}
                     Get a Free Digital consultation{" "}
                   </span>
                 </h2>

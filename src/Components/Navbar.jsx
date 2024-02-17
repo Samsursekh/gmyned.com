@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#4831d4] py-2 w-full font-poppins transition-all sticky top-0 z-[9999]">
+    <nav className="bg-[#4831d4] py-2 w-full transition-all fixed top-0 z-[9999]">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         <Link href={"/"} className="flex items-center">
           <Image

@@ -90,7 +90,7 @@ const ServicesComponent = () => {
             details="We enjoy working with discerning clients, people for whom quality, service, integrity & aesthetics."
             icon={
               <Image
-                src={branding}
+                src={webdev}
                 width={500}
                 height={500}
                 alt="BRANDING STRATEGY"
