@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import heroImage from "@/Images/heroImage.svg";
-import { Tabs } from "./ui/Tabs";
+import { Tabs } from "@/Components/ui/tabs";
 
 export function TabsComponent() {
   const tabs = [
