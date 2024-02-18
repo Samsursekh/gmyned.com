@@ -2,23 +2,43 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { TabsComponent } from "./TabsComponent";
 
 export function Lamp() {
   return (
-    <LampContainer className="">
-      <motion.h1
-        initial={{ opacity: 0.5, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-        className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-      >
-        Turn prospects <br /> into loyal customer
-      </motion.h1>
-    </LampContainer>
+    <>
+      <LampContainer className="m-auto ">
+        <motion.h1
+          initial={{ opacity: 0.5, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="mt-8  bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+        >
+          Our Website Design Process
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 1, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="mt-8 w-[90%] md:w-[80%] lg:w-[60%] bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center font-medium tracking-tight text-transparent m-auto"
+        >
+          How to create a website tailored to your unique business goals? Take a
+          look at our design process that helps us deliver <br /> <br />
+          <span className="font-bold text-white/40">
+            customized and goal-oriented digital solutions.
+          </span>
+        </motion.p>
+      </LampContainer>
+      {/* <TabsComponent /> */}
+    </>
   );
 }
 
@@ -26,11 +46,11 @@ export const LampContainer = ({ children, className }) => {
   return (
     <div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full z-0",
+        "relative  flex min-h-[70vh] flex-col items-center justify-center overflow-hidden bg-slate-950 w-full z-0",
         className
       )}
     >
-      <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
+      <div className="relative mt-44 flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "30rem" }}
@@ -90,9 +110,10 @@ export const LampContainer = ({ children, className }) => {
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-slate-950 "></div>
       </div>
 
-      <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">
+      <div className="relative mt-40 z-50 flex -translate-y-80 flex-col items-center px-5">
         {children}
       </div>
+      {/* <TabsComponent /> */}
     </div>
   );
 };
