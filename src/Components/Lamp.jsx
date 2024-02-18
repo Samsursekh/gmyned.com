@@ -122,7 +122,7 @@ export const LampContainer = ({ children, className }) => {
           alt="dummy image"
           width="400"
           height="400"
-          className="m-auto w-auto  "
+          className="m-auto w-auto"
         />
       </div>
     </div>
