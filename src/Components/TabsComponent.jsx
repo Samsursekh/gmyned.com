@@ -7,51 +7,61 @@ import { Tabs } from "./ui/Tabs";
 export function TabsComponent() {
   const tabs = [
     {
-      title: "Product",
-      value: "product",
+      title: "Web Strategy",
+      value: "Web Strategy",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Product Tab</p>
+          <p>Web Strategy</p>
           <DummyContent />
         </div>
       ),
     },
     {
-      title: "Services",
-      value: "services",
+      title: "Planning & Information Architecture",
+      value: "Planning & Information Architecture",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Services tab</p>
+          <p>Planning & Information Architecture</p>
           <DummyContent />
         </div>
       ),
     },
     {
-      title: "Playground",
-      value: "playground",
+      title: "Creative Design",
+      value: "Creative Design",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Playground tab</p>
+          <p>Creative Design</p>
           <DummyContent />
         </div>
       ),
     },
     {
-      title: "Content",
-      value: "content",
+      title: "Responsive Development",
+      value: "Responsive Development",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Content tab</p>
+          <p>Responsive Development</p>
           <DummyContent />
         </div>
       ),
     },
     {
-      title: "Random",
-      value: "random",
+      title: "Quality Assurance (QA)",
+      value: "Quality Assurance (QA)",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Random tab</p>
+          <p>Quality Assurance (QA)</p>
+          <DummyContent />
+        </div>
+      ),
+    },
+    {
+      title: "Launch & Optimization",
+      value: "Launch & Optimization",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+          <p>Launch & Optimization</p>
           <DummyContent />
         </div>
       ),
@@ -70,9 +80,9 @@ const DummyContent = () => {
     <Image
       src={heroImage}
       alt="dummy image"
-      width="1000"
-      height="1000"
-      className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+      width="400"
+      height="400"
+      className="object-cover object-left-top h-[60%]  md:h-[90%] absolute  inset-x-0 w-[90%] rounded-xl mx-auto"
     />
   );
 };

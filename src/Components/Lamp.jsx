@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 import { TabsComponent } from "./TabsComponent";
+import dProcess from "@/Images/d-process.png";
+import Image from "next/image";
 
 export function Lamp() {
   return (
@@ -113,7 +115,16 @@ export const LampContainer = ({ children, className }) => {
       <div className="relative mt-40 z-50 flex -translate-y-80 flex-col items-center px-5">
         {children}
       </div>
-      {/* <TabsComponent /> */}
+      <div className="w-full z-[9999] absolute mt-32">
+        {/* <TabsComponent /> */}
+        <Image
+          src={dProcess}
+          alt="dummy image"
+          width="400"
+          height="400"
+          className="m-auto w-auto  "
+        />
+      </div>
     </div>
   );
 };
