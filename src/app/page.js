@@ -23,8 +23,8 @@ export default function Home() {
               We help brands Grow Beautifully
             </span>
           </h1>
-          <p className=" text-lg text-gray-300 2xl:pr-5 m-auto w-[90%] md:w-[70%] lg:w-[50%] pb-3">
-            <span className="font-bold">Gmynd</span> Empowering you to make
+          <p className=" text-lg text-center text-gray-300 2xl:pr-5 m-auto w-[90%] md:w-[70%] lg:w-[50%] pb-3">
+            <span className="font-bold ">Gmynd</span> Empowering you to make
             better software experience and digital services, We truly are
             professional brand maker...
           </p>
@@ -70,6 +70,7 @@ export default function Home() {
       </section>
       <section>
         <Lamp />
+        
       </section>
     </main>
   );
