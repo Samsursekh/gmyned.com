@@ -5,6 +5,7 @@ import { cn } from "@/utils/cn";
 import { TabsComponent } from "./TabsComponent";
 import dProcess from "@/Images/d-process.png";
 import Image from "next/image";
+import { InfiniteMovingWebDesignProcess } from "./InfiniteMovingWebDesignProcess";
 
 export function Lamp() {
   return (
@@ -117,13 +118,14 @@ export const LampContainer = ({ children, className }) => {
       </div>
       <div className="w-full z-[9999] absolute mt-32">
         {/* <TabsComponent /> */}
-        <Image
+        {/* <Image
           src={dProcess}
           alt="dummy image"
           width="400"
           height="400"
           className="m-auto w-auto"
-        />
+        /> */}
+        <InfiniteMovingWebDesignProcess />
       </div>
     </div>
   );

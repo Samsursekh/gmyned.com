@@ -2,7 +2,7 @@ import React from "react";
 import webdev from "@/Images/all-svg-files/web-development-svgrepo-com.svg";
 import appdev from "@/Images/all-svg-files/app-development-end-svgrepo-com.svg";
 import keyword from "@/Images/all-svg-files/search-svgrepo-com.svg";
-import branding from "@/Images/all-svg-files/social-media-branding-advertising-promotion-svgrepo-com.svg";
+import branding from "@/Images/all-svg-files/branding.svg";
 import socialmedia from "@/Images/all-svg-files/social-media-campaign-svgrepo-com.svg";
 import seo from "@/Images/all-svg-files/seo-tag-search-engine-optimization-svgrepo-com.svg";
 import Image from "next/image";
@@ -90,7 +90,7 @@ const ServicesComponent = () => {
             details="We enjoy working with discerning clients, people for whom quality, service, integrity & aesthetics."
             icon={
               <Image
-                src={webdev}
+                src={branding}
                 width={500}
                 height={500}
                 alt="BRANDING STRATEGY"
