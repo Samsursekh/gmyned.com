@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Services() {
   return (
-    <section>
+    <section className='mt-10'>
       <ServicesComponent />
     </section>
   )

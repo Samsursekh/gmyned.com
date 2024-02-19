@@ -14,7 +14,7 @@ const Portfolio = () => {
   return (
     <>
       <section className="pt-20 pb-12 lg:pt-[60px] lg:pb-[90px] dark:bg-dark bg-[#e8fff9]">
-        <div className="container mx-auto">
+        <div className="container mx-auto mt-10">
           <div className="flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto mb-[60px] max-w-[510px] text-center">

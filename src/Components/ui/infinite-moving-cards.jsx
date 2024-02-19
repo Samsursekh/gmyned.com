@@ -94,6 +94,7 @@ export const InfiniteMovingCards = ({
                 <div>
                   <Image
                     src={item.imageUrl}
+                    alt={item.name}
                     height={100}
                     width={100}
                     className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal"
