@@ -84,7 +84,7 @@ const Navbar = () => {
             </li>
             <li>
               <h3 className="block py-2 pl-3 pr-4 text-gray-300 rounded lg:bg-transparent  lg:p-0 text-center m-auto">
-                <FlyoutLink href="#" FlyoutContent={PricingContent}>
+                <FlyoutLink href="#" FlyoutContent={ServicePageContent}>
                   <div className="flex items-center justify-between m-auto">
                     Services
                     <IoIosArrowDown />
@@ -193,7 +193,7 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
   );
 };
 
-const PricingContent = () => {
+const ServicePageContent = () => {
   return (
     <div className="w-[300px] bg-white p-6 shadow-xl">
       <div className="mb-3 space-y-3">

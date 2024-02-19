@@ -5,7 +5,7 @@ import FloatingPhoneComp from "@/Components/FloatingPhoneComp";
 const Contact = () => {
   return (
     <section className="mb-32">
-      <div>
+      <div className="mt-10">
         <div
           id="map"
           className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"

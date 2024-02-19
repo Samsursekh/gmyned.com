@@ -1,6 +1,5 @@
 import Image from "next/image";
 import heroImage from "@/Images/heroImage.svg";
-import Link from "next/link";
 import LogoSlider from "@/Components/logoSlider/LogoSlider";
 import ProjectCards from "@/Components/ProjectCards";
 import ServicesComponent from "@/Components/ServicesComponent";
@@ -8,6 +7,7 @@ import ClientsTestimonials from "@/Components/ClientsTestimonials";
 import CTA from "@/Components/CTA";
 import FaqAccordion from "@/Components/FaqAccordionComponent";
 import { Lamp } from "@/Components/Lamp";
+import { SparklesHeroHeading } from "@/Components/SparklesHeroHeading";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
         data-aos="fade-right"
         data-aos-duration="800"
       >
-        <div className="pr-2 md:mb-6 py-14 md:py-0">
+        {/* <div className="pr-2 md:mb-6 py-14 md:py-0">
           <h1 className="text-4xl md:text-5xl font-semibold text-white xl:text-6xl lg:text-5xl p-6">
             <span className="font-League block w-full font-bold text-center transform hover:rotate-3 transition-transform duration-300 perspective lg:leading-[70px]">
               We help brands Grow Beautifully
@@ -37,9 +37,12 @@ export default function Home() {
               <span className="">Explore More</span>
             </Link>
           </div>
+        </div> */}
+        <div className="pt-20 bg-[#4831d4]">
+          <SparklesHeroHeading />
         </div>
 
-        <div className="pb-10 overflow-hidden md:p-10 lg:p-0 sm:pb-0">
+        <div className=" overflow-hidden ">
           <Image
             className="transition-all duration-300 ease-in-out hover:scale-105 mx-auto w-full max-w-[80%] sm:pb-12 lg:pb-0"
             src={heroImage}
@@ -70,7 +73,6 @@ export default function Home() {
       </section>
       <section>
         <Lamp />
-        
       </section>
     </main>
   );
