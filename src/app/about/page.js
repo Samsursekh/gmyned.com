@@ -4,7 +4,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <section>
-      <div className="sm:flex mt-14 items-center justify-evenly max-w-screen-xl m-auto py-6">
+      <div className="sm:flex font-roboto mt-14 items-center justify-evenly max-w-screen-xl m-auto py-6">
         <div className="w-full px-4 lg:w-1/2 xl:w-5/12 ">
           <div className="image object-center text-center">
             <Image

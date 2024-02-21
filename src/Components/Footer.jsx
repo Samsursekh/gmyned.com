@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="relative z-10 bg-[#4831d4] pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+      <footer className="relative font-roboto z-10 bg-[#4831d4] pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
         <div className="container">
           <div className=" flex flex-wrap">
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
@@ -17,6 +17,7 @@ const Footer = () => {
                     className="max-w-full"
                     height={100}
                     width={100}
+                    style={{ height: "auto", width: "auto" }}
                     priority
                   />
                 </Link>
@@ -141,7 +142,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div >
+        <div>
           <span
             className="absolute bottom-0 right-20 z-[-1] "
             style={{
