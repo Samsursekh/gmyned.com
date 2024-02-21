@@ -11,7 +11,7 @@ import { SparklesHeroHeading } from "@/Components/SparklesHeroHeading";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative font-roboto">
       <div
         className="items-center w-full grid-cols-2 mx-auto lg:grid md:py-10 lg:py-8 xl:py-5 bg-[#4831D4] h-[100vh]"
         data-aos="fade-right"

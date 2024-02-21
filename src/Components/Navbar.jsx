@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#4831d4] py-2 w-full transition-all fixed top-0 z-[9999]">
+    <nav className="bg-[#4831d4] font-roboto py-2 w-full transition-all fixed top-0 z-[9999]">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         <Link href={"/"} className="flex items-center">
           <Image
@@ -32,6 +32,7 @@ const Navbar = () => {
             alt="gMynd Logo"
             width={100}
             height={100}
+            style={{ height: "auto", width: "auto" }}
             priority
           />
         </Link>
@@ -57,7 +58,7 @@ const Navbar = () => {
             {isMobileMenuOpen ? (
               <BiMenuAltRight size={30} />
             ) : (
-              // <AnimatedHamButton  />
+              // <LinknimatedHamButton  />
               <RiMenu3Line size={30} />
             )}
           </button>
@@ -164,7 +165,7 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
       onMouseLeave={() => setOpen(false)}
       className="relative w-fit h-fit m-auto"
     >
-      <a href={href} className="relative">
+      <Link href={href} className="relative">
         {children}
         <span
           style={{
@@ -172,7 +173,7 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
           }}
           className="absolute -bottom-2 -left-10 right-2 h-1 origin-left scale-x-0 rounded-full bg-indigo-300 transition-transform duration-300 ease-out"
         />
-      </a>
+      </Link>
       <AnimatePresence>
         {showFlyout && (
           <motion.div
@@ -198,27 +199,33 @@ const ServicePageContent = () => {
     <div className="w-[300px] bg-white p-6 shadow-xl">
       <div className="mb-3 space-y-3">
         <h3 className="font-semibold">For Software Development</h3>
-        <a href="/web-development" className="block text-sm hover:underline">
+        <Link
+          href="services/web-development"
+          className="block text-sm hover:underline"
+        >
           Web development
-        </a>
-        <a href="/app-development" className="block text-sm hover:underline">
+        </Link>
+        <Link href="/app-development" className="block text-sm hover:underline">
           App Development
-        </a>
-        <a href="/ecommerce" className="block text-sm hover:underline">
+        </Link>
+        <Link href="/ecommerce" className="block text-sm hover:underline">
           Ecommerce App
-        </a>
+        </Link>
       </div>
       <div className="mb-6 space-y-3">
         <h3 className="font-semibold">Marketing</h3>
-        <a href="/digital-marketing" className="block text-sm hover:underline">
+        <Link
+          href="/digital-marketing"
+          className="block text-sm hover:underline"
+        >
           Digital Marketing
-        </a>
-        <a href="/branding" className="block text-sm hover:underline">
+        </Link>
+        <Link href="/branding" className="block text-sm hover:underline">
           Branding
-        </a>
-        <a href="/seo" className="block text-sm hover:underline">
+        </Link>
+        <Link href="/seo" className="block text-sm hover:underline">
           SEO
-        </a>
+        </Link>
       </div>
       <button className="w-full rounded-lg text-[#4831d4] border-2 border-[#4831d4] px-4 py-2 font-semibold transition-colors hover:bg-[#4831d4] hover:text-white">
         <Link href="/contact">Let's Talk</Link>
