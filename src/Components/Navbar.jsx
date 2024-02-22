@@ -200,7 +200,7 @@ const ServicePageContent = () => {
       <div className="mb-3 space-y-3">
         <h3 className="font-semibold">For Software Development</h3>
         <Link
-          href="services/web-development"
+          href="/web-development"
           className="block text-sm hover:underline"
         >
           Web development

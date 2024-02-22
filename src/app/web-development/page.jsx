@@ -5,6 +5,7 @@ import animationData from "@/app/services/all-svg-animations/Animation.json";
 import Lottie from "react-lottie";
 import { StickyScrollServicesSingleComponent } from "@/Components/StickyScrollServicesSingleComponent";
 
+
 export default function WebDevelopmentPage() {
   const defaultOptions = {
     loop: true,
