@@ -7,6 +7,7 @@ import Lottie from "react-lottie";
 import { StickyScrollServicesSingleComponent } from "@/Components/StickyScrollServicesSingleComponent";
 import Image from "next/image";
 import { MdOutlineDone } from "react-icons/md";
+import WebDevTools from "@/Components/WebDevTools";
 
 export default function WebDevelopmentPage() {
   const defaultOptions = {
@@ -117,6 +118,7 @@ export default function WebDevelopmentPage() {
       <div>
         <StickyScrollServicesSingleComponent />
       </div>
+      <WebDevTools /> 
     </section>
   );
 }
