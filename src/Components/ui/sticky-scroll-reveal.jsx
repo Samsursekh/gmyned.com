@@ -77,8 +77,11 @@ export const StickyScroll = ({ content }) => {
         <Image
           src={imageArray[activeCard % imageArray.length]}
           alt="image"
-          layout="fill"
-          objectFit="cover"
+          priority
+          width={300}
+          height={300}
+          // layout="fill"
+          // objectFit="cover"
         />
       </motion.div>
     </motion.div>
