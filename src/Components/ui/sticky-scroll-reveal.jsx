@@ -3,9 +3,12 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import image from "@/Images/hero3.png";
-import logo from "@/Images/logo.png";
-import logo2 from "@/Images/logo2.png";
+import crm from "@/Images/web-development-services-images/crm.jpg";
+import hosting from "@/Images/web-development-services-images/hosting.svg";
+import paymentGetway from "@/Images/web-development-services-images/payment-getway.jpg";
+import ssl from "@/Images/web-development-services-images/ssl.jpg";
+import webContent from "@/Images/web-development-services-images/web-content.jpg";
+import responsiveLayout from "@/Images/web-development-services-images/responsive-layout.svg";
 
 export const StickyScroll = ({ content }) => {
   const [activeCard, setActiveCard] = useState(0);
@@ -25,7 +28,14 @@ export const StickyScroll = ({ content }) => {
     });
   });
 
-  const imageArray = [logo2, image, logo, image];
+  const imageArray = [
+    hosting,
+    responsiveLayout,
+    webContent,
+    crm,
+    paymentGetway,
+    ssl,
+  ];
 
   return (
     <motion.div

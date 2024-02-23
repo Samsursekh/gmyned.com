@@ -1,16 +1,27 @@
 "use client";
 
 import React from "react";
-import animationData from "@/app/services/all-svg-animations/Animation.json";
+import animationData from "@/Images/all-svg-animations/Animation.json";
+import animate2 from "@/Images/web-development-services-images/web-dev.json";
 import Lottie from "react-lottie";
 import { StickyScrollServicesSingleComponent } from "@/Components/StickyScrollServicesSingleComponent";
-
+import Image from "next/image";
+import { MdOutlineDone } from "react-icons/md";
 
 export default function WebDevelopmentPage() {
   const defaultOptions = {
     loop: true,
     autoplay: true,
     animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const animateOption = {
+    loop: true,
+    autoplay: true,
+    animationData: animate2,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -23,6 +34,7 @@ export default function WebDevelopmentPage() {
           <h1 className="text-4xl py-4 font-roboto font-bold">
             Best IT Consulting Agency in Kolkata
           </h1>
+
           <p className="text-xl font-sans">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi natus
             ut fuga suscipit accusantium veritatis modi provident? Obcaecati,
@@ -37,8 +49,69 @@ export default function WebDevelopmentPage() {
             options={defaultOptions}
             height={200}
             width={200}
-            style={{width: "auto", height: "auto"}}
+            style={{ width: "auto", height: "auto" }}
           />
+        </div>
+      </div>
+      <div className="font-roboto  flex-row md:flex px-6 py-3 m-auto items-center justify-center">
+        <div className=" md:w-[35%] lg:w-[35%] w-full">
+          <Lottie
+            options={animateOption}
+            height={100}
+            width={100}
+            style={{ width: "auto", height: "auto" }}
+          />
+        </div>
+        <div className="md:w-[60%] lg:w-[60%] w-full ">
+          <h2 className="text-3xl font-bold text-[#4831d4] mt-3">
+            Professional and customised website development services:
+            {/* <span>
+              <Lottie
+                options={animateOption}
+                height={20}
+                width={20}
+                style={{ width: "20px", height: "20px" }}
+              />
+            </span> */}
+          </h2>
+          <p className="mt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+            corrupti adipisci quis accusamus maxime dolores reprehenderit! Ut
+            blanditiis sed soluta veniam reprehenderit, quas dolores quisquam ex
+            nostrum voluptate dolore tempora explicabo dignissimos quae animi!
+            Asperiores dolores consequuntur, enim facilis voluptas pariatur
+            repudiandae officiis consectetur, corporis necessitatibus, odio
+            libero ullam eligendi assumenda fugit. In eos tempore architecto
+            ipsam similique illo blanditiis.
+          </p>
+          <div className="mt-3">
+            <div className=" flex text-left w-auto">
+              <MdOutlineDone color="blue" size={30} />
+              <div>
+                <p>Responsive Website</p>
+              </div>
+            </div>
+
+            <div className=" flex text-left w-auto">
+              <MdOutlineDone color="blue" size={30} />
+              <div>
+                <p>Ecommerce Website</p>
+              </div>
+            </div>
+
+            <div className=" flex text-left w-auto">
+              <MdOutlineDone color="blue" size={30} />
+              <div>
+                <p>Wordpress Website</p>
+              </div>
+            </div>
+            <div className=" flex text-left w-auto">
+              <MdOutlineDone color="blue" size={30} />
+              <div>
+                <p>Web Hosting and Domain Registration </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div>

@@ -2,8 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
-import { TabsComponent } from "./TabsComponent";
-import dProcess from "@/Images/d-process.png";
 import Image from "next/image";
 import { InfiniteMovingWebDesignProcess } from "./InfiniteMovingWebDesignProcess";
 
