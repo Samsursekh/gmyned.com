@@ -15,7 +15,6 @@ import postman from "@/Images/web-development-services-images/Tools-Images/postm
 import vitejs from "@/Images/web-development-services-images/Tools-Images/vitejs.svg";
 import vscode from "@/Images/web-development-services-images/Tools-Images/vscode.svg";
 import wordpress from "@/Images/web-development-services-images/Tools-Images/wordpress.svg";
-
 import Image from "next/image";
 
 const WebDevTools = () => {
@@ -39,10 +38,10 @@ const WebDevTools = () => {
             <SingleCard image={nodejs} name="NodeJs" />
             <SingleCard image={angular} name="Angular JS" />
             <SingleCard image={vscode} name="VS Code" />
-            <SingleCard image={postman} name="Postman" />
             <SingleCard image={materialui} name="MUI" />
-            <SingleCard image={github} name="Github" />
+            <SingleCard image={postman} name="Postman" />
             <SingleCard image={mongodb} name="MongoDB" />
+            <SingleCard image={github} name="Github" />
           </div>
         </div>
       </section>
