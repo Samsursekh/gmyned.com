@@ -208,7 +208,7 @@ const ServicePageContent = () => {
         <Link href="/app-development" className="block text-sm hover:underline">
           App Development
         </Link>
-        <Link href="/ecommerce" className="block text-sm hover:underline">
+        <Link href="/ecommerce-development" className="block text-sm hover:underline">
           Ecommerce App
         </Link>
       </div>
