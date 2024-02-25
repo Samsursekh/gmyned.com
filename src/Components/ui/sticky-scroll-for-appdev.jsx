@@ -39,7 +39,7 @@ export const StickyScroll = ({ content }) => {
 
   return (
     <motion.div
-      className="h-[30rem] overflow-auto w-full flex justify-center relative space-x-10 font-roboto font-bold"
+      className="h-[30rem] overflow-auto w-full flex justify-evenly relative font-roboto font-bold"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
@@ -78,8 +78,8 @@ export const StickyScroll = ({ content }) => {
           src={imageArray[activeCard % imageArray.length]}
           alt="image"
           priority
-          width={300}
-          height={300}
+          width={400}
+          height={400}
           // layout="fill"
           // objectFit="cover"
         />

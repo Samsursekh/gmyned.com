@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { StickyScroll } from "./ui/sticky-scroll-reveal";
+import { StickyScroll } from "./ui/sticky-scroll-for-appdev";
 
 const content = [
   {
@@ -35,7 +35,7 @@ const content = [
       "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
   },
 ];
-export function StickyScrollServicesSingleComponent() {
+export function StickyScrollAppdevServices() {
   return (
     <div className="">
       <StickyScroll content={content} />
