@@ -1,3 +1,5 @@
+"use client";
+
 import LottieAnimation from "@/utils/LotteiFiles/LottieAnimation";
 import React from "react";
 import animationData from "@/Images/all-svg-animations/Animation.json";
@@ -5,8 +7,43 @@ import LetsConnectButton from "@/utils/LetsConnectButton/LetsConnectButton";
 import Image from "next/image";
 import ecom from "@/Images/ecommerce-development-services-images/ecom-project.png";
 import { MdOutlineDone } from "react-icons/md";
+import WebDevTools from "@/Components/WebDevTools";
+import { StickyScrollForEcomDev } from "@/Components/ui/sticky-scroll-for-ecomdev";
 
 export default function EcommerceDevelopment() {
+  const content = [
+    {
+      title: "Home Screen with Sales Boosting Features",
+      description:
+        "You can showcase various products and offers running on in your e-store on the home screen and allure the visitors to make a purchase.",
+    },
+    {
+      title: "Product Category",
+      description:
+        "A dedicated product category section helps people to narrow down their search and get a comprehensive idea about your collection. It improves users’ accessibility at your online store.",
+    },
+    {
+      title: "Wishlist",
+      description:
+        "Allow the users to save something they like but are not yet ready to buy it. They can also add an out-of-the-stock item in the wishlist and get notified once the product is restocked.",
+    },
+    {
+      title: "Shopping Cart",
+      description:
+        "Let your users easily add & remove items to & from the shopping cart and save the cart even if they bounce for several times. Showcase essential product details along with the items in the cart.",
+    },
+    {
+      title: "Testing",
+      description:
+        "We perform thorough quality assurance (QA) testing to ensure that the end product is stable, usable and secure. Our activities include user experience testing, functional testing, performance testing, security testing and device & platform testing.",
+    },
+    {
+      title: "Easy Checkout and Multiple Payment Modes",
+      description:
+        "The users can purchase an item easily by specifying their address and contact details. Multiple payment options further enhance the users’ convenience.",
+    },
+  ];
+
   return (
     <section className="pt-14">
       <div className=" bg-black p-10 flex-row md:flex md:justify-between justify-center items-center">
@@ -19,7 +56,9 @@ export default function EcommerceDevelopment() {
             Smart Features Of Our Online Shopping Mobile App
           </p>
 
-          <LetsConnectButton />
+          <div className="px-6">
+            <LetsConnectButton />
+          </div>
         </div>
         <div className=" lg:w-[40%] md:w-full w-full">
           <LottieAnimation animationData={animationData} />
@@ -83,6 +122,11 @@ export default function EcommerceDevelopment() {
           </div>
         </div>
       </div>
+
+      {/* Third section */}
+
+      <StickyScrollForEcomDev content={content} />
+      <WebDevTools />
     </section>
   );
 }

@@ -10,7 +10,7 @@ import ssl from "@/Images/web-development-services-images/ssl.jpg";
 import webContent from "@/Images/web-development-services-images/web-content.jpg";
 import responsiveLayout from "@/Images/web-development-services-images/responsive-layout.svg";
 
-export const StickyScroll = ({ content }) => {
+export const StickyScrollForWebDev = ({ content }) => {
   const [activeCard, setActiveCard] = useState(0);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -20,7 +20,7 @@ export const StickyScroll = ({ content }) => {
   const cardLength = content.length;
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index / cardLength);
+    const cardsBreakpoints = content?.map((_, index) => index / cardLength);
     cardsBreakpoints.forEach((breakpoint, index) => {
       if (latest > breakpoint - 0.2 && latest <= breakpoint) {
         setActiveCard(() => index);
@@ -44,7 +44,7 @@ export const StickyScroll = ({ content }) => {
     >
       <div className="div relative flex items-start px-4">
         <div className="max-w-2xl">
-          {content.map((item, index) => (
+          {content?.map((item, index) => (
             <div key={item.title + index} className="my-20">
               <motion.h2
                 initial={{
@@ -80,8 +80,6 @@ export const StickyScroll = ({ content }) => {
           priority
           width={400}
           height={400}
-          // layout="fill"
-          // objectFit="cover"
         />
       </motion.div>
     </motion.div>
