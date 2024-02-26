@@ -12,7 +12,7 @@ import ssl from "@/Images/web-development-services-images/ssl.jpg";
 import webContent from "@/Images/web-development-services-images/web-content.jpg";
 import responsiveLayout from "@/Images/web-development-services-images/responsive-layout.svg";
 
-export const StickyScrollForAppDev = ({ content }) => {
+export const StickyScrollForEcomDev = ({ content }) => {
   const [activeCard, setActiveCard] = useState(0);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({

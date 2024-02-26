@@ -1,14 +1,48 @@
+// "use client";
+
 import React from "react";
 import animationData from "@/Images/all-svg-animations/Animation.json";
 import { MdOutlineDone } from "react-icons/md";
-import { StickyScrollAppdevServices } from "@/Components/StickyScrollAppdevServices";
 import WebDevTools from "@/Components/WebDevTools";
 import appDev from "@/Images/app-development-services-images/app-dev.jpg";
 import Image from "next/image";
 import LottieAnimation from "@/utils/LotteiFiles/LottieAnimation";
 import LetsConnectButton from "@/utils/LetsConnectButton/LetsConnectButton";
+import { StickyScrollForAppDev } from "@/Components/ui/sticky-scroll-for-appdev";
 
 export default function AppDevelopment() {
+  const content = [
+    {
+      title: "Hosting",
+      description:
+        "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+    },
+    {
+      title: "Responsive Layout",
+      description:
+        "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+    },
+    {
+      title: "Web content",
+      description:
+        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    },
+    {
+      title: "CRM",
+      description:
+        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    },
+    {
+      title: "Payment Getway Integration",
+      description:
+        "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+    },
+    {
+      title: "SSL",
+      description:
+        "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+    },
+  ];
   return (
     <section className="pt-14">
       <div className=" bg-black p-10 flex-row md:flex md:justify-between justify-center items-center">
@@ -16,12 +50,13 @@ export default function AppDevelopment() {
           <h1 className="text-4xl py-4 font-roboto font-bold animate-shimmer items-center justify-center bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] rounded-r-full px-6 text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
             Android App Development
           </h1>
-
           <p className="text-xl font-sans animate-shimmer items-center justify-center px-6 font-medium text-slate-400 ">
             {/* PERSONALIZED APP SOLUTIONS WITH REFRESHING UI CONCEPTS */}
             Personalized app solutions with refreshing ui concepts
           </p>
-          <LetsConnectButton />
+          <div className="px-6">
+            <LetsConnectButton />
+          </div>
         </div>
         <div className=" lg:w-[40%] md:w-full w-full">
           <LottieAnimation animationData={animationData} />
@@ -94,7 +129,7 @@ export default function AppDevelopment() {
       </div>
       {/* third section */}
 
-      <StickyScrollAppdevServices />
+      <StickyScrollForAppDev content={content} />
       <WebDevTools />
     </section>
   );
