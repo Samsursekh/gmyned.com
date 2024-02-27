@@ -207,7 +207,7 @@ const Footer = () => {
           </span>
         </div>
       </footer>
-      <div className="py-2 text-center bg-black">
+      <div className="py-2 text-center bg-black font-roboto">
         <p className="text-white ">© 2024 Copyright by GMYND</p>
       </div>
     </>
