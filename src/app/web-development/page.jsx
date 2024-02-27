@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import animationData from "@/Images/all-svg-animations/Animation.json";
+import animationData from "@/Images/all-svg-animations/webdev.json";
 import animate2 from "@/Images/web-development-services-images/web-dev.json";
 import Lottie from "react-lottie";
 import { MdOutlineDone } from "react-icons/md";

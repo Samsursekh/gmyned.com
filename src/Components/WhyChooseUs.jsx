@@ -1,51 +1,23 @@
-import aboutImage from "@/Images/aboutPage.svg";
-import Image from "next/image";
+import React from "react";
 
-const About = () => {
+export default function WhyChooseUs() {
   return (
-    <section>
-      <div className="sm:flex font-roboto mt-2 items-center justify-evenly max-w-screen-xl m-auto py-6">
-        <div className="w-full px-4 lg:w-1/2 xl:w-5/12 ">
-          <div className="image object-center text-center">
-            <Image
-              src={aboutImage}
-              alt="About Us"
-              width={500}
-              height={500}
-              priority
-            />
-          </div>
+    <div className="bg-black font-roboto">
+      <section
+        id="features"
+        className="relative block px-6 py-10 md:py-20 md:px-10  border-t border-b border-neutral-900 bg-neutral-900/30"
+      >
+        <div className="relative mx-auto max-w-5xl text-center">
+          <h2 className="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
+            Why Choose Gmynd As Your Expert
+          </h2>
+          <p className="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide text-gray-400">
+            Regardless of your industry or business type, be it a IT company or
+            a service provider company, there are plenty of reasons you can
+            benefit from leveraging our digital marketing services.
+          </p>
         </div>
 
-        <div className="w-full px-4 lg:w-1/2 xl:w-5/12 ">
-          <div className="mt-10 lg:mt-0">
-            <span className="block mb-4 text-lg font-semibold text-[#4831d4]">
-              Why Choose Us
-            </span>
-            <h2 className="mb-5 text-3xl font-bold  sm:text-[40px]/[48px]">
-              Why Choose Gmynd As Your Expert
-            </h2>
-            <p className="mb-5 text-base text-body-color dark:text-dark-6">
-              Regardless of your industry or business type, be it a IT company
-              or a service provider company, there are plenty of reasons you can
-              benefit from leveraging our digital marketing services.
-            </p>
-            <p className="mb-8 text-base text-body-color dark:text-dark-6">
-              A domain name is one of the first steps to establishing your
-              brand. Secure a consistent brand image with a domain name that
-              matches your business.
-            </p>
-            <a
-              href="/"
-              className="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border border-transparent rounded-md px-7 bg-[#4831d4] hover:bg-opacity-90"
-            >
-              Get Started
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="font-roboto px-6 pb-10 md:px-10  bg-neutral-900">
         <div className="relative mx-auto max-w-7xl z-10 grid grid-cols-2 gap-10 pt-14 sm:grid-cols-4 lg:grid-cols-6">
           <div className="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
             <div
@@ -233,9 +205,7 @@ const About = () => {
             </h3>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
-};
-
-export default About;
+}

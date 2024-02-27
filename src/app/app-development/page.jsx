@@ -1,7 +1,7 @@
 // "use client";
 
 import React from "react";
-import animationData from "@/Images/all-svg-animations/Animation.json";
+import animationData from "@/Images/all-svg-animations/app-development.json";
 import { MdOutlineDone } from "react-icons/md";
 import WebDevTools from "@/Components/WebDevTools";
 import appDev from "@/Images/app-development-services-images/app-dev.jpg";
