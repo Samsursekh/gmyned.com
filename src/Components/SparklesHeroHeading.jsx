@@ -2,6 +2,7 @@
 import React from "react";
 import { SparklesCore } from "./ui/sparkles";
 import Link from "next/link";
+import { TypewriterEffect } from "./TypewriterEffect";
 
 export function SparklesHeroHeading() {
   return (
@@ -9,6 +10,7 @@ export function SparklesHeroHeading() {
       <div className=" text-center">
         <h1 className="md:text-5xl px-4 text-4xl lg:text-6xl font-bold text-center text-white relative z-20 block w-full transform hover:rotate-3 transition-transform duration-300 perspective lg:leading-[70px]">
           We help brands Grow Beautifully
+          {/* <TypewriterEffect /> */}
         </h1>
         <p className=" text-lg mt-4 text-center text-gray-300 2xl:pr-5 m-auto w-[90%] md:w-[70%] lg:w-[50%] pb-3">
           <span className="font-bold ">Gmynd</span> Empowering you to make
