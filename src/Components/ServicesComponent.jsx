@@ -1,7 +1,7 @@
 import React from "react";
 import webdev from "@/Images/all-svg-files/web-development-svgrepo-com.svg";
 import appdev from "@/Images/all-svg-files/app-development-end-svgrepo-com.svg";
-import keyword from "@/Images/all-svg-files/search-svgrepo-com.svg";
+import graphic from "@/Images/all-svg-files/graphic-design.svg";
 import branding from "@/Images/all-svg-files/branding.svg";
 import socialmedia from "@/Images/all-svg-files/social-media-campaign-svgrepo-com.svg";
 import seo from "@/Images/all-svg-files/seo-tag-search-engine-optimization-svgrepo-com.svg";
@@ -47,14 +47,14 @@ const ServicesComponent = () => {
 
         <div className=" flex flex-wrap">
           <ServiceCard
-            title="SOCIAL MEDIA MARKETING"
+            title="DIGITAL MARKETING"
             details="We enjoy working with discerning clients, people for whom quality, service, integrity & aesthetics."
             icon={
               <Image
                 src={socialmedia}
                 width={500}
                 height={500}
-                alt="SOCIAL MEDIA MARKETING"
+                alt="DIGITAL MARKETING"
                 priority
               />
             }
@@ -112,14 +112,14 @@ const ServicesComponent = () => {
             }
           />
           <ServiceCard
-            title="KEYWORD RESEARCH"
+            title="GRAPHIC DESIGNING"
             details="We enjoy working with discerning clients, people for whom quality, service, integrity & aesthetics."
             icon={
               <Image
-                src={keyword}
+                src={graphic}
                 width={500}
                 height={500}
-                alt="KEYWORD RESEARCH"
+                alt="GRAPHIC DESIGNING"
                 priority
               />
             }

@@ -31,7 +31,9 @@ export default function Home() {
             priority
           />
         </div>
+       
       </div>
+
       <section>
         <LogoSlider />
       </section>

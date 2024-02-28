@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section>
+    <section className="pt-14">
       <div className="sm:flex font-roboto mt-2 items-center justify-evenly max-w-screen-xl m-auto py-6">
         <div className="w-full px-4 lg:w-1/2 xl:w-5/12 ">
           <div className="image object-center text-center">
