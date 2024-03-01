@@ -67,7 +67,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="mb-32 font-roboto">
+    <section className="mb-32 font-roboto pt-7">
       <div className="mt-10">
         <div
           id="map"
