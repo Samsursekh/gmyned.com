@@ -1,10 +1,73 @@
 "use client";
 
 import FloatingPhoneComp from "@/Components/FloatingPhoneComp";
+import { useState } from "react";
+import { database, ID } from "../appwrite";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+
+    if (
+      formData.firstName === "" ||
+      formData.lastName === "" ||
+      formData.email === "" ||
+      formData.message === ""
+    ) {
+      alert("Fill all the credentials");
+      setSubmitting(false);
+    } else {
+      try {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!formData.email.match(emailRegex)) {
+          alert("Invalid email address");
+        }
+
+        const response = await database.createDocument(
+          `${process.env.NEXT_PUBLIC_APP_DATABASE_ID}`,
+          `${process.env.NEXT_PUBLIC_APP_COLLECTION_ID}`,
+          ID.unique(),
+          {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            message: formData.message,
+          }
+        );
+
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          message: "",
+        });
+      } catch (error) {
+        console.error("Error storing form data in Appwrite:", error);
+      } finally {
+        setSubmitting(false);
+      }
+    }
+  };
+
   return (
-    <section className="mb-32 font-roboto">
+    <section className="mb-32 font-roboto pt-7">
       <div className="mt-10">
         <div
           id="map"
@@ -23,59 +86,62 @@ const Contact = () => {
           <div className="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300">
             <div className="flex flex-wrap">
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
-                <form>
-                  <div className="relative mb-6" data-te-input-wrapper-init>
+                <form onSubmit={handleSubmit}>
+                  <div className="relative mb-6">
                     <input
                       type="text"
-                      className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-                      id="exampleInput90"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none"
+                      placeholder="First Name"
                     />
-                    <label className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none ">
-                      First Name
-                    </label>
                   </div>
 
-                  <div className="relative mb-6" data-te-input-wrapper-init>
+                  <div className="relative mb-6">
                     <input
                       type="text"
-                      className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-                      id="exampleInput90"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none"
+                      placeholder="Last Name"
                     />
-                    <label className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none ">
-                      Last Name
-                    </label>
                   </div>
 
-                  <div className="relative mb-6" data-te-input-wrapper-init>
+                  <div className="relative mb-6">
                     <input
                       type="email"
-                      className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-                      id="exampleInput91"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none"
+                      placeholder="Email"
                     />
-                    <label className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none ">
-                      Email address
-                    </label>
-                  </div>
-                  <div className="relative mb-6" >
-                    <textarea
-                      className="peer block min-h-[auto] w-full rounded border-2 
-                      bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none 
-                      transition-all duration-200 ease-linear focus:placeholder:opacity-100
-                       data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-                      id="exampleFormControlTextarea1"
-                    ></textarea>
-                    <label className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none ">
-                      Message
-                    </label>
                   </div>
 
+                  <div className="relative mb-6">
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none"
+                      placeholder="Message"
+                    />
+                  </div>
+
+                  {/* Repeat similar code for last name, email, and message fields */}
+
                   <button
-                    type="button"
-                    className="mb-6 w-full rounded bg-[#4831D4] text-white px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal   lg:mb-0"
+                    type="submit"
+                    className="mb-6 w-full rounded bg-[#4831D4] text-white px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal lg:mb-0"
+                    disabled={submitting}
                   >
-                    Send
+                    {submitting ? "Submitting..." : "Send"}
                   </button>
                 </form>
+
+                {/* Ended */}
               </div>
               <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
                 <FloatingPhoneComp />
