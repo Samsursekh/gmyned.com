@@ -51,6 +51,25 @@ const Contact = () => {
             message: formData.message,
           }
         );
+        // Send email
+        const res = await fetch("/api/sendEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            message: formData.message,
+          }),
+        });
+
+        if (res.ok) {
+          alert("Email sent successfully");
+        } else {
+          alert("Failed to send email");
+        }
 
         setFormData({
           firstName: "",
