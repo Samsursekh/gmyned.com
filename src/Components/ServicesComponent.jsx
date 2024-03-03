@@ -60,14 +60,14 @@ const ServicesComponent = () => {
             }
           />
           <ServiceCard
-            title="APPLICATION DEVELOPMENT"
+            title="ECOMMERCE DEVELOPMENT"
             details="We enjoy working with discerning clients, people for whom quality, service, integrity & aesthetics."
             icon={
               <Image
                 src={appdev}
                 width={500}
                 height={500}
-                alt="APPLICATION DEVELOPMENT"
+                alt="ECOMMERCE DEVELOPMENT"
                 priority
               />
             }
