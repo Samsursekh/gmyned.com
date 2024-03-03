@@ -199,16 +199,19 @@ const ServicePageContent = () => {
     <div className="w-[300px] bg-white p-6 shadow-xl">
       <div className="mb-3 space-y-3">
         <h3 className="font-semibold">For Software Development</h3>
-        <Link
-          href="/web-development"
-          className="block text-sm hover:underline"
-        >
+        <Link href="/web-development" className="block text-sm hover:underline">
           Web development
         </Link>
-        <Link href="/app-development" className="block text-sm hover:underline">
-          App Development
+        <Link
+          href="/graphics-designing"
+          className="block text-sm hover:underline"
+        >
+          Graphics Designing
         </Link>
-        <Link href="/ecommerce-development" className="block text-sm hover:underline">
+        <Link
+          href="/ecommerce-development"
+          className="block text-sm hover:underline"
+        >
           Ecommerce App
         </Link>
       </div>

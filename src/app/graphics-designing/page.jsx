@@ -48,7 +48,7 @@ export default function AppDevelopment() {
       <div className=" bg-black p-10 flex-row md:flex md:justify-between justify-center items-center">
         <div className=" lg:w-[60%] md:w-full w-full pl-3">
           <h1 className="text-4xl py-4 font-roboto font-bold animate-shimmer items-center justify-center bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] rounded-r-full px-6 text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-            APP DEVELOPMENT
+            GRAPHICS DESIGNING
           </h1>
           <p className="text-xl font-sans animate-shimmer items-center justify-center px-6 font-medium text-slate-400 ">
             {/* PERSONALIZED APP SOLUTIONS WITH REFRESHING UI CONCEPTS */}
@@ -67,7 +67,7 @@ export default function AppDevelopment() {
         <div className=" md:w-[35%] lg:w-[35%] w-full">
           <Image
             src={appDev}
-            alt="App Development"
+            alt="GRAPHICS"
             width={400}
             height={400}
             priority
@@ -76,7 +76,7 @@ export default function AppDevelopment() {
         </div>
         <div className=" lg:w-[60%] md:w-full w-full pl-3">
           <h1 className="text-4xl py-4 font-roboto font-bold animate-shimmer items-center justify-center text-slate-600">
-          APP DEVELOPMENT
+            GRAPHICS DESIGNING
           </h1>
           <p className="text-[14px] font-sans animate-shimmer items-center justify-center font-medium text-slate-400 ">
             Android is amongst one of the most significantly dominating mobile
@@ -89,7 +89,7 @@ export default function AppDevelopment() {
           </p>
           <br />
           <p className="text-[14px] font-sans animate-shimmer items-center justify-center font-medium text-slate-400 ">
-            Gmynd is a reliable & competent APP DEVELOPMENT company that is
+            Gmynd is a reliable & competent GRAPHIC DESIGNING company that is
             known for offering excellent and exclusive solutions developed after
             extensive research regarding the app's practical use & feasibility
             for targeted users. We have a dedicated team of app developers on
