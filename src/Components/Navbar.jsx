@@ -167,13 +167,33 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
     setOpen(false);
   };
 
+  /*
+    const [showFlyout, setShowFlyout] = useState(false);
+
+  const handleClick = () => {
+    console.log("Clicked")
+    setShowFlyout((prevState) => !prevState);
+  };
+
+  return (
+    <div
+      onMouseEnter={() => setShowFlyout(true)}
+      onMouseLeave={() => setShowFlyout(false)}
+      className="relative w-fit h-fit m-auto"
+    >
+
+    NEED TO CHECK WHAT IS THE ISSUSE HERE IN THESE CODE
+
+  */  
+
+    
   return (
     <div
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
-      className="relative w-fit h-fit m-auto"
+      className="relative w-fit h-fit m-auto border-2"
     >
-      <Link href={href} className="relative" onClick={handleClick}>
+      <Link href={href} className="relative" >
         {children}
         <span
           style={{
