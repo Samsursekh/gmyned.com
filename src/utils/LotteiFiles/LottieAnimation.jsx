@@ -18,6 +18,7 @@ export default function LottieAnimation({ animationData }) {
       rendererSettings: {
         preserveAspectRatio: "xMidYMid slice",
       },
+      style: "width: 300px; height: 300px;",
     }),
     [animation]
   );
