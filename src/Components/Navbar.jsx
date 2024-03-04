@@ -160,12 +160,12 @@ const Navbar = () => {
 export default Navbar;
 
 const FlyoutLink = ({ children, href, FlyoutContent }) => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
-  const showFlyout = FlyoutContent !== undefined && open;
-  const handleClick = () => {
-    setOpen(false);
-  };
+  // const showFlyout = FlyoutContent !== undefined && open;
+  // const handleClick = () => {
+  //   setOpen(false);
+  // };
 
   /*
     const [showFlyout, setShowFlyout] = useState(false);
@@ -184,16 +184,28 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
 
     NEED TO CHECK WHAT IS THE ISSUSE HERE IN THESE CODE
 
-  */  
+  */
 
-    
+  const [showFlyout, setShowFlyout] = useState(false);
+
+  const handleClick = () => {
+    setShowFlyout(!showFlyout);
+  };
+
   return (
+    <div
+      onMouseEnter={() => setShowFlyout(true)}
+      onMouseLeave={() => setShowFlyout(false)}
+      className="relative w-fit h-fit m-auto"
+    >
+      {/* return (
     <div
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
       className="relative w-fit h-fit m-auto border-2"
-    >
-      <Link href={href} className="relative" >
+    > */}
+      <Link href={href} className="relative">
+        {/* <Link href={href} className="relative" onClick={handleClick}> */}
         {children}
         <span
           style={{
