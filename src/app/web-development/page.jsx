@@ -44,14 +44,14 @@ export default function WebDevelopmentPage() {
     },
   ];
 
-  const animateOption = {
-    loop: true,
-    autoplay: true,
-    animationData: animate2,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const animateOption = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animate2,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
 
   return (
     <section className="pt-14">
@@ -75,12 +75,7 @@ export default function WebDevelopmentPage() {
       </div>
       <div className="font-roboto  flex-row md:flex px-6 py-3 m-auto items-center justify-center">
         <div className=" md:w-[35%] lg:w-[35%] w-full">
-          <Lottie
-            options={animateOption}
-            height={100}
-            width={100}
-            style={{ width: "auto", height: "auto" }}
-          />
+          <LottieAnimation animationData={animate2} />
         </div>
         <div className="md:w-[60%] lg:w-[60%] w-full ">
           <h2 className="text-3xl font-bold text-[#4831d4] mt-3">

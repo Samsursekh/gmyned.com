@@ -65,7 +65,7 @@ const Navbar = () => {
         </div>
         <div
           className={`items-center justify-between w-full top-14 lg:top-0 right-0 lg:flex lg:w-auto 
-          lg:order-1 shadow-md  bg-black md:bg-black lg:bg-[#4831D4] lg:shadow-none absolute
+          lg:order-1 shadow-md  bg-black/75 md:bg-black/75 border-b border-b-gray-700 lg:border-b-0 lg:bg-[#4831D4] lg:shadow-none absolute
            lg:relative p-4 ${isMobileMenuOpen ? "block " : "hidden "}`}
           id="mobile-menu-2"
         >
@@ -85,7 +85,12 @@ const Navbar = () => {
             </li>
             <li>
               <h3 className="block py-2 pl-3 pr-4 text-gray-300 rounded lg:bg-transparent  lg:p-0 text-center m-auto">
-                <FlyoutLink href="#" FlyoutContent={ServicePageContent}>
+                <FlyoutLink
+                  href="#"
+                  FlyoutContent={() => (
+                    <ServicePageContent closeMobileMenu={closeMobileMenu} />
+                  )}
+                >
                   <div className="flex items-center justify-between m-auto">
                     Services
                     <IoIosArrowDown />
@@ -158,6 +163,9 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
   const [open, setOpen] = useState(false);
 
   const showFlyout = FlyoutContent !== undefined && open;
+  const handleClick = () => {
+    setOpen(false);
+  };
 
   return (
     <div
@@ -165,7 +173,7 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
       onMouseLeave={() => setOpen(false)}
       className="relative w-fit h-fit m-auto"
     >
-      <Link href={href} className="relative">
+      <Link href={href} className="relative" onClick={handleClick}>
         {children}
         <span
           style={{
@@ -194,22 +202,28 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
   );
 };
 
-const ServicePageContent = () => {
+const ServicePageContent = ({ closeMobileMenu }) => {
   return (
     <div className="w-[300px] bg-white p-6 shadow-xl">
       <div className="mb-3 space-y-3">
         <h3 className="font-semibold">For Software Development</h3>
-        <Link href="/web-development" className="block text-sm hover:underline">
+        <Link
+          href="/web-development"
+          onClick={closeMobileMenu}
+          className="block text-sm hover:underline"
+        >
           Web development
         </Link>
         <Link
           href="/graphics-designing"
+          onClick={closeMobileMenu}
           className="block text-sm hover:underline"
         >
           Graphics Designing
         </Link>
         <Link
           href="/ecommerce-development"
+          onClick={closeMobileMenu}
           className="block text-sm hover:underline"
         >
           Ecommerce App
@@ -219,19 +233,30 @@ const ServicePageContent = () => {
         <h3 className="font-semibold">Marketing</h3>
         <Link
           href="/digital-marketing"
+          onClick={closeMobileMenu}
           className="block text-sm hover:underline"
         >
           Digital Marketing
         </Link>
-        <Link href="/branding" className="block text-sm hover:underline">
+        <Link
+          href="/branding"
+          onClick={closeMobileMenu}
+          className="block text-sm hover:underline"
+        >
           Branding
         </Link>
-        <Link href="/seo" className="block text-sm hover:underline">
+        <Link
+          href="/seo"
+          onClick={closeMobileMenu}
+          className="block text-sm hover:underline"
+        >
           SEO
         </Link>
       </div>
       <button className="w-full rounded-lg text-[#4831d4] border-2 border-[#4831d4] px-4 py-2 font-semibold transition-colors hover:bg-[#4831d4] hover:text-white">
-        <Link href="/contact">Let's Talk</Link>
+        <Link href="/contact" onClick={closeMobileMenu}>
+          Let's Talk
+        </Link>
       </button>
     </div>
   );
