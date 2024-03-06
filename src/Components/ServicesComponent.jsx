@@ -6,6 +6,7 @@ import branding from "@/Images/all-svg-files/branding.svg";
 import socialmedia from "@/Images/all-svg-files/social-media-campaign-svgrepo-com.svg";
 import seo from "@/Images/all-svg-files/seo-tag-search-engine-optimization-svgrepo-com.svg";
 import Image from "next/image";
+import { CardHoverEffectComponent } from "./CardHoverEffectComponent";
 
 const ServiceCard = ({ icon, title, details }) => {
   return (
@@ -124,6 +125,10 @@ const ServicesComponent = () => {
               />
             }
           />
+        </div>
+
+        <div className="bg-black">
+          {/* <CardHoverEffectComponent /> */}
         </div>
       </div>
     </section>
