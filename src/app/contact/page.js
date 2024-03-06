@@ -40,7 +40,7 @@ const Contact = () => {
           alert("Invalid email address");
         }
 
-        const response = await database.createDocument(
+        await database.createDocument(
           `${process.env.NEXT_PUBLIC_APP_DATABASE_ID}`,
           `${process.env.NEXT_PUBLIC_APP_COLLECTION_ID}`,
           ID.unique(),

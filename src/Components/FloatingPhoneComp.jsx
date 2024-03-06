@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FiBatteryCharging, FiWifi } from "react-icons/fi";
 import logo2 from "@/Images/logo2.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const FloatingPhoneComp = () => {
   return (
@@ -69,7 +70,10 @@ const Screen = () => {
       />
 
       <button className="absolute bottom-4 left-4 right-4 z-10 rounded-lg border-[1px] bg-white py-2 text-sm font-medium text-[#4831D4] backdrop-blur">
-        Contact us
+        {/* Contact us */}
+        <Link href="tel:9339316583" rel="noreferrer" target="_blank">
+          Contact us
+        </Link>
       </button>
 
       <div className="absolute -bottom-72 left-[50%] h-96 w-96 -translate-x-[50%] rounded-full bg-[#4831D4]" />
