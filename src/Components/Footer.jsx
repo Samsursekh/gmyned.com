@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="relative font-roboto z-10 bg-[#4831d4] pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+      <footer className="relative font-roboto z-10 bg-[#4831d4] pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[40px]">
         <div className="container">
           <div className=" flex flex-wrap">
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
@@ -25,7 +25,7 @@ const Footer = () => {
                   Sed ut perspiciatis undmnis is iste natus error sit amet
                   voluptatem totam rem aperiam.
                 </p>
-                <p className="flex items-center text-sm font-medium text-dark dark:text-white">
+                <p className="flex items-center text-sm font-medium text-dark dark:text-white ">
                   <span className="mr-3 text-[#4831D4]">
                     <svg
                       width="20"
@@ -57,26 +57,33 @@ const Footer = () => {
                   </span>
                   <span>+012 (345) 678 99</span>
                 </p>
+              
               </div>
             </div>
 
-            <LinkGroup header="Resources">
-              <NavLink link="/#" label="SaaS Development" />
-              <NavLink link="/#" label="Our Products" />
-              <NavLink link="/#" label="User Flow" />
-              <NavLink link="/#" label="User Strategy" />
-            </LinkGroup>
-            <LinkGroup header="Company">
-              <NavLink link="/about" label="About GMYND" />
+            <LinkGroup header="COMPANY">
+              <NavLink link="/about" label="About us" />
+              <NavLink link="/portfoilo" label="Portfoilo" />
               <NavLink link="/contact" label="Contact & Support" />
-              <NavLink link="/#" label="Success History" />
-              <NavLink link="/#" label="Setting & Privacy" />
+              <NavLink link="/privacy-and-policy" label="Privacy & Policy" />
+              <NavLink link="/terms-of-services" label="Terms of service" />
             </LinkGroup>
-            <LinkGroup header="Quick Links">
+            <LinkGroup header="OUR SERVICES">
+              <NavLink link="/#" label="Web Development Company" />
+              <NavLink link="/#" label="Online Digital Marketing" />
+              <NavLink link="/#" label="Creative Graphic Designing" />
+              <NavLink link="/#" label="Ecommerce application" />
+              <NavLink link="/#" label="Branding" />
+              <NavLink link="/#" label="Search Engine Optimization (SEO)" />
+            </LinkGroup>
+
+            <LinkGroup header="SUPPORT & INFO">
               <NavLink link="/#" label="Premium Support" />
               <NavLink link="/services" label="Our Services" />
               <NavLink link="/about" label="Know Our Team" />
-              <NavLink link="/#" label="Download App" />
+              <NavLink link="/#" label="FAQ's" />
+              <NavLink link="/#" label="Refund Policy" />
+              <NavLink link="/#" label="Sitemap" />
             </LinkGroup>
 
             <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
@@ -177,7 +184,6 @@ const Footer = () => {
               </defs>
             </svg>
           </span>
-
         </div>
       </footer>
       <div className="py-2 text-center bg-black font-roboto">
