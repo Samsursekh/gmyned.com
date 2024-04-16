@@ -1,8 +1,9 @@
 import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/Components/Navbar";
+import Nav from "@/Components/Nav";
 import Footer from "@/Components/Footer";
 import Head from "next/head";
+import Navbar from "@/Components/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
