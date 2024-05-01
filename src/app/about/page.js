@@ -1,6 +1,8 @@
 import aboutImage from "@/Images/aboutPage.svg";
 import Image from "next/image";
 
+
+
 const About = () => {
   return (
     <section className="pt-14">
